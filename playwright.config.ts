@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { env } from './config/env';
+import { env } from './src/config/env';
 
 /**
  * Read environment variables from file.
@@ -14,7 +14,7 @@ import { env } from './config/env';
  */
 export default defineConfig({
   testDir: '.',
-  testMatch: ['api/tests/**/*.spec.ts', 'ui/tests/**/*.spec.ts'],
+  testMatch: ['src/api/tests/**/*.spec.ts', 'src/ui/tests/**/*.spec.ts'],
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */

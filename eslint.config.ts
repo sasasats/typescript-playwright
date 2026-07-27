@@ -3,7 +3,7 @@ import prettier from 'eslint-config-prettier';
 import playwright from 'eslint-plugin-playwright';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default [
   {
     ignores: ['node_modules/**', 'playwright-report/**', 'test-results/**', 'coverage/**', 'dist/**'],
   },
@@ -32,4 +32,4 @@ export default tseslint.config(
   },
 
   prettier,
-);
+];
